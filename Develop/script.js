@@ -23,6 +23,10 @@ var randomChar="";
 
 // Write password to the #password input
 function writePassword() {
+  lowercase=false;
+  uppercase=false;
+  numeric=false;
+  special=false;
   var password = "";
 
   //How this function basically works is that it chooses a random character from the entire list.
@@ -50,22 +54,12 @@ function writePassword() {
  
   }
 
-  //build the string from ranList
-  /*
-  while(ranList.length>0){
-    var letIndex=Math.floor(Math.random()*(ranList.length));
-    password+=ranList[letIndex];
-    ranList.splice(letIndex,1);
 
-  }
-  */
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
   passwordText.value = password;
-  //return password;
+  
 }
 
-// Events listeners
+// Events listeners for button and checkboxes
 generateBtn.addEventListener("click", writePassword);
 
 lowerBox.addEventListener('change', function (e) {
@@ -77,7 +71,7 @@ lowerBox.addEventListener('change', function (e) {
 upperBox.addEventListener('change', function (e) {
   if (upperBox.checked) {
     uppercase = true;
-    // ranNumLet = Math.floor(Math.random()*(numChar+1));
+    
   }
 })
 numericBox.addEventListener('change', function (e) {
