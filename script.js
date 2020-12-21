@@ -23,10 +23,10 @@ var randomChar="";
 
 // Write password to the #password input
 function writePassword() {
-  lowercase=false;
-  uppercase=false;
-  numeric=false;
-  special=false;
+  //lowercase=false;
+  //uppercase=false;
+  //numeric=false;
+  //special=false;
   var password = "";
 
   //How this function basically works is that it chooses a random character from the entire list.
@@ -66,6 +66,9 @@ lowerBox.addEventListener('change', function (e) {
   if (lowerBox.checked) {
     lowercase = true;
   }
+  else{
+    lowercase=false;
+  }
 
 })
 upperBox.addEventListener('change', function (e) {
@@ -73,15 +76,24 @@ upperBox.addEventListener('change', function (e) {
     uppercase = true;
     
   }
+  else{
+    uppercase=false;
+  }
 })
 numericBox.addEventListener('change', function (e) {
   if (numericBox.checked) {
     numeric = true;
   }
+  else{
+    numeric=false;
+  }
 })
 specialBox.addEventListener('change', function (e) {
   if (specialBox.checked) {
     special = true;
+  }
+  else{
+    special=false;
   }
 })
 
